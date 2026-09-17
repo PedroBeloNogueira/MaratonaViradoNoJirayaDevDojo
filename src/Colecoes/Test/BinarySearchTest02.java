@@ -14,9 +14,9 @@ public class BinarySearchTest02 {
         mangas.add(new Manga(3, "Dragon Ball Z"));
         mangas.add(new Manga(1, "Nanatsu no Taizaikkk"));
         mangas.add(new Manga(4, "Olhos de Gato"));
+        mangas.add(new Manga(0, "Suzume "));
         Collections.sort(mangas);
-        Collections.binarySearch(mangas,"2");
-        System.out.println(mangas);
+        System.out.println(Collections.binarySearch(mangas, new Manga(2, "Naruto")));
 
     }
 }
