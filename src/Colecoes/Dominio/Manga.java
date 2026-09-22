@@ -5,10 +5,17 @@ import java.util.Objects;
 public class Manga implements Comparable<Manga> {
     private long ID;
     private String nome;
+    private int quantidade;
 
     public Manga(long ID, String nome) {
         this.ID = ID;
         this.nome = nome;
+    }
+
+    public Manga(long ID, String nome, int quantidade) {
+        this.ID = ID;
+        this.nome = nome;
+        this.quantidade = quantidade;
     }
 
     @Override
@@ -28,7 +35,16 @@ public class Manga implements Comparable<Manga> {
         return "Manga{" +
                 "ID=" + ID +
                 ", nome='" + nome + '\'' +
+                ", quantidade=" + quantidade +
                 '}';
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     public long getID() {
